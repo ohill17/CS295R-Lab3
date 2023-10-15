@@ -1,17 +1,26 @@
-function ProfileCard({title, handle, image}){
+function ProfileCard({ title, handle, image, description }) {
     //const props = {title, handle};
-    return(
-        <div>
-               <img src={image} alt="Personal Voice Assistant Logo's" />
-            <div>
-                Title is {title}
+    return (
+        <div className="card">
+            <div className="card-image">
+                <figure className="image is-1by1">
+                    <img src={image} alt="Personal Voice Assistant Logo's" />
+                </figure>
             </div>
-            <div>
-                Handle is {handle}
+
+            <div className="card-content">
+                <div className="media-content">
+                <p className="title is-4">{title}</p>
+                <p className="subtitle is 6">{handle}</p>
             </div>
-        </div> 
+            <div className="content">
+                {description}
+            </div>
+             </div>
+
+        </div>
     )
-       
-    
+
+
 }
-export default ProfileCard;
+export default ProfileCard; 
